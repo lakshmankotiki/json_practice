@@ -66,3 +66,38 @@ function showObjInList(jsonObj) {
         section.appendChild(myArticle);
     }
 }
+
+/**displaying static dummy json data
+ * in document body using DOM
+ */
+var dummyJson = {
+    "person1": {
+        "fName" : "LaKsHmAn",
+        "lName": "Kotiki",
+        "age": 23,
+        "department": "IT",
+        "interests": [
+            "sports",
+            "coding",
+            "books",
+            "travelling"
+        ]
+    },
+    "person2": {
+        "fName": "Ram",
+        "lName": "Kotiki",
+        "age": 23,
+        "department": "Postal",
+        "interests": [
+            "sports",
+            "Gym",
+            "business",
+            "job"
+        ]
+    }
+};
+
+var myh5 = document.createElement("h5");
+myh5.textContent = "Made with ❤️ by " + dummyJson.person1.fName;
+myh5.classList.add("foot-class");
+body.append(myh5);
